@@ -17,9 +17,9 @@ public class Promo implements Comparable<Promo> {
 
 	@Override
 	public int compareTo(Promo promoToCompare) {
-		return this.getPriority() != promoToCompare.getPriority() ?
-				this.getPriority() > promoToCompare.getPriority() ? 1 : -1 :
-				this.getName().compareTo(promoToCompare.getName());
+	        return this.getPriority() != promoToCompare.getPriority() ?
+        	        this.getPriority() < promoToCompare.getPriority() ? 1 : -1 :
+                	-1*this.getName().compareTo(promoToCompare.getName());
 	}
 
 	public String getName() {
